@@ -1,0 +1,29 @@
+# Competitive-Programming-3-Problems
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+
+multiset<pair<int,int>>m;
+
+int n;
+cin>>n;
+int t;
+t = n*2;
+
+while(t--){
+    int x;
+    int y;
+    cin>>x>>y;
+    m.insert({x,y});
+}
+double sum = 0;
+
+for(multiset<pair<int,int>>::iterator it=m.begin(); it!=m.end(); it++){
+    pair<int,int> p1 = *it;
+    it++;
+    pair<int,int> p2 = *it;
+    sum+=sqrt(pow(p1.first-p2.first,2)+pow(p1.second-p2.second,2));
+}
+return 0;
+}
